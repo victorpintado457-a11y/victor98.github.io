@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Para Lucía 💖</title>
+<style>
+body {
+  background: pink;
+  text-align: center;
+  overflow: hidden;
+  font-family: Arial;
+}
+h1 {
+  margin-top: 20%;
+  font-size: 40px;
+}
+.item {
+  position: absolute;
+  font-size: 30px;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% { top: -10%; }
+  100% { top: 110%; }
+}
+</style>
+</head>
+<body>
+
+<h1>Te quiero, Lucía 💕</h1>
+
+<script>
+function createItem() {
+  const item = document.createElement("div");
+  item.classList.add("item");
+  item.innerHTML = Math.random() > 0.5 ? "🐰" : "🎈";
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.animationDuration = (Math.random() * 3 + 2) + "s";
+  document.body.appendChild(item);
+
+  setTimeout(() => item.remove(), 5000);
+}
+
+setInterval(createItem, 300);
+</script>
+
+</body>
+</html>
