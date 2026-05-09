@@ -1,47 +1,299 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>Para Lucía 💖</title>
-<style>
-body {
-  background: pink;
-  text-align: center;
-  overflow: hidden;
-  font-family: Arial;
-}
-h1 {
-  margin-top: 20%;
-  font-size: 40px;
-}
-.item {
-  position: absolute;
-  font-size: 30px;
-  animation: fall linear infinite;
-}
-@keyframes fall {
-  0% { top: -10%; }
-  100% { top: 110%; }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Feliz Cumpleaños 💌</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body{
+      overflow:hidden;
+      min-height:100vh;
+      background: linear-gradient(180deg,#ffd6e7,#fff5f9);
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+    }
+
+    .container{
+      position:relative;
+      z-index:10;
+      width:90%;
+      max-width:850px;
+      text-align:center;
+      animation: fadeIn 2s ease;
+    }
+
+    h1{
+      font-size:4rem;
+      color:#ff4d88;
+      margin-bottom:20px;
+      text-shadow:0 0 10px rgba(255,255,255,.7);
+      animation: bounce 2s infinite;
+    }
+
+    .sub{
+      font-size:1.2rem;
+      color:#444;
+      margin-bottom:30px;
+    }
+
+    .letter{
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(10px);
+      border-radius:25px;
+      padding:35px;
+      text-align:left;
+      box-shadow:0 10px 30px rgba(0,0,0,.1);
+      color:#444;
+      line-height:1.8;
+      font-size:1.05rem;
+      animation: floatCard 4s ease-in-out infinite;
+    }
+
+    .letter h2{
+      text-align:center;
+      color:#ff4d88;
+      margin-bottom:25px;
+      font-size:2rem;
+    }
+
+    .balloon{
+      position:absolute;
+      bottom:-150px;
+      width:80px;
+      height:100px;
+      border-radius:50%;
+      animation: rise linear infinite;
+      opacity:.8;
+    }
+
+    .balloon::after{
+      content:'';
+      position:absolute;
+      width:2px;
+      height:80px;
+      background:#999;
+      left:50%;
+      top:100px;
+    }
+
+    .bunny{
+      position:absolute;
+      font-size:45px;
+      animation: hop 6s linear infinite;
+      opacity:.9;
+    }
+
+    @keyframes rise{
+      from{
+        transform:translateY(0) rotate(0deg);
+      }
+      to{
+        transform:translateY(-130vh) rotate(360deg);
+      }
+    }
+
+    @keyframes hop{
+      0%{
+        transform:translateX(-10vw) translateY(0);
+      }
+      25%{
+        transform:translateX(25vw) translateY(-30px);
+      }
+      50%{
+        transform:translateX(50vw) translateY(0);
+      }
+      75%{
+        transform:translateX(75vw) translateY(-30px);
+      }
+      100%{
+        transform:translateX(110vw) translateY(0);
+      }
+    }
+
+    @keyframes bounce{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-10px);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes floatCard{
+      0%,100%{
+        transform:translateY(0);
+      }
+      50%{
+        transform:translateY(-8px);
+      }
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:2.7rem;
+      }
+
+      .letter{
+        padding:25px;
+        font-size:.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<h1>Te quiero, Lucía 💕</h1>
+  <div class="container">
+    <h1>🎂 Feliz Cumpleaños 🎂</h1>
+    <p class="sub">Hoy el universo entero decidió celebrar que existes ✨</p>
 
-<script>
-function createItem() {
-  const item = document.createElement("div");
-  item.classList.add("item");
-  item.innerHTML = Math.random() > 0.5 ? "🐰" : "🎈";
-  item.style.left = Math.random() * 100 + "vw";
-  item.style.animationDuration = (Math.random() * 3 + 2) + "s";
-  document.body.appendChild(item);
+    <div class="letter">
+      <h2>Mi buen amor… 💌</h2>
 
-  setTimeout(() => item.remove(), 5000);
-}
+      <p>
+        Llegó el día que si para ti no es especial, para mí sí lo es…
+        o deja eso de lado, cada día que pasa que te tengo a mi lado ya lo hace especial.
+      </p>
 
-setInterval(createItem, 300);
-</script>
+      <br>
+
+      <p>
+        Sabes que te quiero mucho y bueno… más que eso.
+        No sé realmente si este será el último cumpleaños que pasaré contigo,
+        pero no quiero hacerte llorar haciendo como que el que sufre soy yo.
+      </p>
+
+      <br>
+
+      <p>
+        Solo un par de disculpas…
+        deja de pensar de quién fue la culpa,
+        es mía y ya.
+      </p>
+
+      <br>
+
+      <p>
+        Por mí estuvieras con tus amigas este cumple X,
+        pero bueno… te toca soportarme a mí.
+      </p>
+
+      <br>
+
+      <p>
+        Ya sé que muchas veces hablamos de dejarlo y tomar tiempo,
+        pero este tipo de acá por primera vez está rompiendo promesas…
+        me superan estas cosas.
+      </p>
+
+      <br>
+
+      <p>
+        Sin más quiero que este día sientas que es especial,
+        si bien no tienes a toda una manada,
+        que sepas que te quiero 3 millones,
+        que mi amor por ti pasa por todos los universos,
+        no existe multiverso donde no te quiera,
+        eres mi <i>for good</i> en cualquier realidad 💚
+      </p>
+
+      <br>
+
+      <p>
+        Te mando un abrazo virtual y un besote,
+        ya verás tú dónde 😌
+      </p>
+
+      <br>
+
+      <p>
+        Espero me sigas aguantando,
+        te quiero mucho
+        y que tengas un supeeeeer cumpleaños 🎉
+      </p>
+
+      <br>
+
+      <p style="text-align:right;">
+        — Manzanita 🍎
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // GLOBOS INFINITOS
+    function createBalloon(){
+      const balloon = document.createElement("div");
+      balloon.classList.add("balloon");
+
+      const colors = [
+        "#ff6b9d",
+        "#ffd93d",
+        "#6bcBff",
+        "#b28dff",
+        "#ff8fab"
+      ];
+
+      balloon.style.background =
+        colors[Math.floor(Math.random()*colors.length)];
+
+      balloon.style.left = Math.random()*100 + "vw";
+
+      const size = 50 + Math.random()*50;
+      balloon.style.width = size + "px";
+      balloon.style.height = size * 1.2 + "px";
+
+      balloon.style.animationDuration =
+        (8 + Math.random()*8) + "s";
+
+      document.body.appendChild(balloon);
+
+      setTimeout(()=>{
+        balloon.remove();
+      },16000);
+    }
+
+    setInterval(createBalloon, 500);
+
+    // CONEJITOS
+    function createBunny(){
+      const bunny = document.createElement("div");
+      bunny.classList.add("bunny");
+      bunny.innerHTML = "🐰";
+
+      bunny.style.top = Math.random()*90 + "vh";
+      bunny.style.animationDuration =
+        (10 + Math.random()*6) + "s";
+
+      document.body.appendChild(bunny);
+
+      setTimeout(()=>{
+        bunny.remove();
+      },16000);
+    }
+
+    setInterval(createBunny, 2500);
+  </script>
 
 </body>
 </html>
